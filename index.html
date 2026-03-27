@@ -5,6 +5,7 @@
 
 <section>
   <h2>Join Us</h2>
+  <p>April 25</p>
   <p>1:30 PM–4:30 PM</p>
   <p>Cambridge Hyatt Regency</p>
   <p>Light refreshments will be served.</p>
@@ -14,7 +15,25 @@
 <section>
   <h2>RSVP</h2>
   <form id="rsvp-form">
-    <!-- fields go here -->
-  </form>
-  <div id="message"></div>
+  <label for="name">Name</label>
+  <input id="name" type="text" required />
+
+  <label for="email">Email</label>
+  <input id="email" type="email" required />
+
+  <label for="attending_count">Number attending</label>
+  <input id="attending_count" type="number" min="1" value="1" required />
+
+  <label for="notes">Notes</label>
+  <textarea id="notes"></textarea>
+
+  <label>
+    <input id="send_confirmation" type="checkbox" />
+    Email me a confirmation
+  </label>
+
+  <button type="submit">RSVP</button>
+</form>
+
+<p id="message"></p>
 </section>
