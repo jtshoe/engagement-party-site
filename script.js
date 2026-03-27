@@ -4,7 +4,7 @@ const message = document.getElementById("message");
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
 
-  message.textContent = "Submitting RSVP...";
+  message.textContent = "Submitting...";
 
   const payload = {
     name: document.getElementById("name").value.trim(),
@@ -14,8 +14,10 @@ form.addEventListener("submit", async (e) => {
     send_confirmation: document.getElementById("send_confirmation").checked,
   };
 
+  console.log("Submitting payload:", payload);
+
   try {
-    const response = await fetch("YOUR_DEPLOYED_FUNCTION_URL_HERE", {
+    const response = await fetch("https://yvnglehhsgspknhgqiki.supabase.co/functions/v1/confirmation-emails", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -24,14 +26,16 @@ form.addEventListener("submit", async (e) => {
     });
 
     const data = await response.json();
+    console.log("Response:", data);
 
     if (!response.ok) {
-      throw new Error(data.error || "Something went wrong.");
+      throw new Error(data.error || "Submission failed.");
     }
 
-    message.textContent = "Thanks! Your RSVP has been received.";
+    message.textContent = "Thanks! RSVP submitted.";
     form.reset();
   } catch (err) {
+    console.error(err);
     message.textContent = `Error: ${err.message}`;
   }
 });
