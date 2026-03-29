@@ -1,39 +1,41 @@
-<header>
-  <h1>Josh Sweet & Jessica Shoemaker</h1>
-  <p>Engagement Party</p>
-</header>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Josh Sweet & Jessica Shoemaker | Engagement Party</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Josh Sweet & Jessica Shoemaker</h1>
+      <p>Engagement Party</p>
+    </header>
 
-<section>
-  <h2>Join Us</h2>
-  <p>April 25</p>
-  <p>1:30 PM–4:30 PM</p>
-  <p>Cambridge Hyatt Regency</p>
-  <p>Light refreshments will be served.</p>
-  <p>Featuring a performance by Magic by George.</p>
-</section>
+    <section>
+      <h2>Join Us</h2>
+      <p>April 25</p>
+      <p>1:30 PM–4:30 PM</p>
+      <p>Cambridge Hyatt Regency</p>
+      <p>Light refreshments will be served.</p>
+      <p>Featuring a performance by Magic by George.</p>
+    </section>
 
-<section>
-  <h2>RSVP</h2>
-  <form id="rsvp-form">
-  <label for="name">Name</label>
-  <input id="name" type="text" required />
+    <section>
+      <h2>RSVP</h2>
+      <p>Please fill out the form below to let us know you're coming!</p>
 
-  <label for="email">Email</label>
-  <input id="email" type="email" required />
-
-  <label for="attending_count">Number attending</label>
-  <input id="attending_count" type="number" min="1" value="1" required />
-
-  <label for="notes">Notes</label>
-  <textarea id="notes"></textarea>
-
-  <label>
-    <input id="send_confirmation" type="checkbox" />
-    Email me a confirmation
-  </label>
-
-  <button type="submit">RSVP</button>
-</form>
-
-<p id="message"></p>
-</section>
+      <div class="form-container">
+        <iframe 
+          src="https://docs.google.com/forms/d/e/1FAIpQLSfEYEgDY1zDZmRNr8cDkBCZxlWORPsdmRH_vuyu18ZUB8r-9Q/viewform?embedded=true" 
+          width="100%" 
+          height="1100" 
+          frameborder="0">
+          Loading…
+        </iframe>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
