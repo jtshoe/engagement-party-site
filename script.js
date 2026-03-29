@@ -1,5 +1,12 @@
+console.log("script loaded");
+
 const form = document.getElementById("rsvp-form");
 const message = document.getElementById("message");
+
+console.log("form found?", !!form);
+console.log("message found?", !!message);
+// const form = document.getElementById("rsvp-form");
+// const message = document.getElementById("message");
 
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
